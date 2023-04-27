@@ -4,66 +4,12 @@ import { IconType } from 'react-icons';
 import { BsFacebook, BsInstagram, BsLinkedin } from 'react-icons/bs';
 const Footer = () => {
   return (
-    <div className=" w-screen h-full bg-primary flex flex-col  text-white">
-      <div className="flex flex-col  md:flex-row gap-2 justify-between items-center px-8 py-4">
-        <ul className="flex flex-row gap-2">
-          <li>Privacy Policy</li>
-          <li>Term and Conditions</li>
-        </ul>
-        <p>© 2023 All Rights Reserved.</p>
-      </div>
-      <section className="flex flex-col md:flex-row justify-between items-start gap-10  px-8 container ">
-        <div>
-          <h3 className="text-lg font-bold mb-8">Logo</h3>
-          <ul>
-            <li>
-              <p className="max-w-xs">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                malesuada, nisl eget ultricies tincidunt, nunc elit lacinia
-                mauris, eget aliquet nisl nisl eget dolor. Sed malesuada, nisl
-              </p>
-            </li>
-            <li>
-              <button>Contact US</button>
-            </li>
-          </ul>
-        </div>
-        <ListItems
-          title="Digital Transformation"
-          items={[
-            'Mobile Application',
-            'Web Application',
-            'Blockchain',
-            'Data Science & analytics',
-            'Artificial Intelligence',
-            'Internet.Of.Things. (IOT)',
-          ]}
-        />
+    <section className=" flex h-full w-screen flex-col border-t  border-secondary text-black ">
+      <div className="container flex flex-col items-start justify-between gap-10  px-8 md:flex-row ">
+        <div className="flex w-full flex-row items-center justify-between gap-4 md:flex-col md:items-start">
+          <h3 className="text-lg font-bold">Logo</h3>
 
-        <ListItems
-          title="Product Development"
-          items={[
-            'Software Development',
-            'Architecture & Design',
-            'Legacy System Migration',
-            'Application Modernization',
-            'Quality Assurance & Testing',
-          ]}
-        />
-        <ListItems
-          title="Consulting"
-          items={[
-            'Technology Consulting',
-            'Agile & DevOps',
-            'IT Outsourcing',
-            'Business Automation',
-          ]}
-        />
-
-        <div>
-          <h3 className="text-lg font-bold mb-8">Socials</h3>
-
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-row items-center gap-2">
             <SocialItems
               title="Facebook"
               Icon={BsFacebook}
@@ -81,8 +27,69 @@ const Footer = () => {
             />
           </ul>
         </div>
-      </section>
-    </div>
+
+        <ListItems
+          title="Navigation"
+          items={[
+            {
+              title: 'Home',
+              path: PATHS.app.home,
+            },
+            {
+              title: 'Services',
+              path: PATHS.app.services,
+            },
+            {
+              title: 'solutions',
+              path: PATHS.app.solutions,
+            },
+          ]}
+        />
+        <ListItems
+          title=" "
+          items={[
+            {
+              title: 'Partners',
+              path: PATHS.app.partners,
+            },
+            {
+              title: 'About',
+              path: PATHS.app.about,
+            },
+            {
+              title: 'Contact',
+              path: PATHS.app.contact,
+            },
+          ]}
+        />
+        <ListItems
+          title="More Pages"
+          items={[
+            {
+              title: 'Privacy Policy',
+              path: PATHS.app.home,
+            },
+            {
+              title: 'Terms & Conditions',
+              path: PATHS.app.services,
+            },
+            {
+              title: 'FAQ',
+              path: PATHS.app.solutions,
+            },
+          ]}
+        />
+        <ListItems
+          title="Download"
+          items={[
+            {
+              title: 'Privacy Policy',
+              path: PATHS.app.home,
+            },
+          ]}
+        />
+      </div>
+    </section>
   );
 };
 
@@ -98,27 +105,36 @@ const SocialItems = ({
   link: string;
 }) => {
   return (
-    <li>
-      <Link
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex flex-row gap-1 items-center"
-      >
-        <Icon />
-        <span>{title}</span>
+    <li className=" flex h-7 w-7 cursor-pointer flex-row items-center  justify-center rounded-md border-[1px]  border-primary p-1 transition-colors duration-300 ease-in-out hover:bg-primary hover:text-white">
+      <Link href={link} target="_blank" rel="noopener noreferrer">
+        <Icon className="h-full w-full" />
       </Link>
     </li>
   );
 };
 
-const ListItems = ({ title, items }: { title: string; items: string[] }) => {
+const ListItems = ({
+  title,
+  items,
+}: {
+  title: string;
+  items: {
+    title: string;
+    path: string;
+  }[];
+}) => {
   return (
-    <div>
-      <h3 className="text-lg font-bold mb-8">{title}</h3>
+    <div className="w-full">
+      <h3 className="mb-4 whitespace-nowrap text-lg font-bold">{title}</h3>
       <ul className="flex flex-col gap-2">
-        {items.map((item) => (
-          <li key={item}>{item}</li>
+        {items.map((item, index) => (
+          <li key={index}>
+            <Link className="text-sm text-secondary-text" href={item.path}>
+              <span className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-[width] after:content-[''] hover:after:ml-auto hover:after:w-full ">
+                {item.title}
+              </span>
+            </Link>
+          </li>
         ))}
       </ul>
     </div>

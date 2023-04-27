@@ -24,7 +24,8 @@
       "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"],
-      "@images/*": ["public/images/*"]
+      "@images/*": ["public/images/*"],
+      "@icons/*": ["public/icons/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

@@ -6,6 +6,7 @@ export const PATHS = {
     partners: '/partners',
     about: '/about',
     contact: '/contact',
+    solutions: '/solutions',
   },
   social: {
     facebook: 'https://www.facebook.com',

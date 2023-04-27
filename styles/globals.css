@@ -4,10 +4,36 @@
 
 section {
   padding: 100px 0;
+  @apply container mx-auto;
 }
 .slick-dots li.slick-active button:before {
   @apply text-primary;
 }
 .slick-dots li:hover button:before {
   @apply text-primary text-opacity-70;
+}
+
+.solutions {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(116, 68, 100, 1) 10%,
+    rgba(116, 68, 100, 1) 90%
+  );
+}
+.consult {
+  width: 100%;
+  background-image: url('../public/icons/meeting.svg');
+  background-size: cover;
+  height: 0;
+  padding: 0; /* reset */
+  padding-bottom: 92%;
+}
+.ready {
+  width: 100%;
+  background-image: url('../public/icons/ready.svg');
+  background-size: cover;
+  height: 0;
+  padding: 0; /* reset */
+  padding-bottom: 92%;
 }
