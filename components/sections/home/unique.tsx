@@ -56,8 +56,11 @@ const Unique = () => {
   return (
     <section className="h-full w-full">
       <div className="mb-14 flex flex-col items-center gap-4 text-center sm:mb-20 ">
-        <SectionHeader title="What Makes Us Unique?" variant="secondary" />
-        <h1 className="text-4xl font-bold">Developed With The User In Mind</h1>
+        <SectionHeader
+          title="What Makes Us Unique?"
+          variant="secondary"
+          subtitle="Developed With The User In Mind"
+        />
       </div>
       <div className=" grid w-full  grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
         {UniqueItemData.map((item, index) => (

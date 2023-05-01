@@ -6,13 +6,13 @@ import Link from 'next/link';
 import { BiLink } from 'react-icons/bi';
 const Team = () => {
   return (
-    <section className="w-full flex flex-col gap-4 sm:flex-row md:gap-8 md:items-start ">
-      <div className="flex flex-col items-center sm:items-start mb-8 ">
-        <SectionHeader title="Our Team" />
+    <section className="flex w-full flex-col gap-4 sm:flex-row md:items-start md:gap-8 ">
+      <div className="mb-8 flex flex-col items-center sm:items-start ">
+        <SectionHeader
+          title="Our Team"
+          subtitle="We´re Ready For Your Services"
+        />
 
-        <h2 className="text-2xl font-bold text-primary ">
-          We´re Ready For Your Services
-        </h2>
         <Button className="mt-4">
           <span className="flex items-center gap-2">
             <span>View All</span>
@@ -20,7 +20,7 @@ const Team = () => {
           </span>
         </Button>
       </div>
-      <div className="flex flex-col gap-4  sm:flex-row justify-around w-full ">
+      <div className="flex w-full flex-col  justify-around gap-4 sm:flex-row ">
         <TeamItem
           name="Safwen Ben Fredj"
           position="CEO, Founder"
@@ -55,16 +55,16 @@ const TeamItem = ({
         target="_blank"
         rel="noopener noreferrer"
         href={linkedin}
-        className="w-48 h-48 relative group rounded-xl overflow-hidden"
+        className="group relative h-48 w-48 overflow-hidden rounded-xl"
       >
-        <div className="cursor-pointer z-10 absolute will-change-auto transition-colors duration-300 ease-in-out bg-primary top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-0 group-hover:bg-opacity-30   ">
-          <BiLink className="text-2xl opacity-0 group-hover:opacity-100 transition-opacity  duration-300 ease-in-out text-white " />
+        <div className="absolute left-0 top-0 z-10 flex h-full w-full cursor-pointer items-center justify-center bg-primary bg-opacity-0 transition-colors duration-300 ease-in-out will-change-auto group-hover:bg-opacity-30   ">
+          <BiLink className="text-2xl text-white opacity-0 transition-opacity  duration-300 ease-in-out group-hover:opacity-100 " />
         </div>
 
         <Image
           src={image}
           alt={name}
-          className="w-full h-full object-cover rounded-xl scale-100 group-hover:scale-110 transition-transform duration-300 ease-in-out"
+          className="h-full w-full scale-100 rounded-xl object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
         />
       </Link>
       <div className="space-y-1 text-center">

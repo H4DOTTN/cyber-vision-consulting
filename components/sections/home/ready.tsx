@@ -8,10 +8,11 @@ const Ready = () => {
         <div className="ready" />
       </div>
       <div className="flex max-w-xl flex-col items-center gap-4 text-center">
-        <SectionHeader title="ARE YOU READY?" variant="secondary" />
-        <h1 className="text-3xl font-bold capitalize">
-          Explore Everything Cyber Vision Consulting Has To Offer
-        </h1>
+        <SectionHeader
+          title="ARE YOU READY?"
+          variant="secondary"
+          subtitle="Explore Everything Cyber Vision Consulting Has To Offer"
+        />
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-center">
           <Button>lreom ipsum </Button>
           <Button variant="secondary">lorem ipsum</Button>

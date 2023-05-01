@@ -5,11 +5,17 @@ import { RiTeamLine } from 'react-icons/ri';
 import { BiCoffeeTogo } from 'react-icons/bi';
 import { BsAward } from 'react-icons/bs';
 import SpecialSection from '@/components/common/special-section';
+import SectionHeader from '@/components/common/section-header';
 const Achievements = () => {
   return (
     <SpecialSection>
       <div className="mx-auto mb-8 flex max-w-lg flex-col items-center  justify-center text-center  ">
-        <h2 className="text-2xl font-bold ">Our Achievements</h2>
+        <SectionHeader
+          title="What makes us proud"
+          variant="secondary"
+          className="text-white"
+          subtitle="Our Achievements"
+        />
         <p className="mt-1 text-sm">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           voluptates, quod, quia, voluptate quae voluptatem quibusdam

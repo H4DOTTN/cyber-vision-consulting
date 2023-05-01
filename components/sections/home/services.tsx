@@ -6,13 +6,13 @@ import { BsFileEarmarkCode } from 'react-icons/bs';
 
 const Services = () => {
   return (
-    <section className="w-full h-full flex flex-col gap-4 lg:flex-row md:gap-8 md:items-center">
-      <div className="flex flex-col items-center sm:items-start mb-8  basis-1/4 ">
-        <SectionHeader title="Our Services" />
-        <h2 className="text-2xl font-bold text-primary ">
-          Services We´re Providing
-        </h2>
-        <p className="text-sm mt-1">
+    <section className="flex h-full w-full flex-col gap-4 md:items-center md:gap-8 lg:flex-row">
+      <div className="mb-8 flex basis-1/4 flex-col items-center  sm:items-start ">
+        <SectionHeader
+          title="Our Services"
+          subtitle="   Services We´re Providing"
+        />
+        <p className="mt-1 text-sm">
           Cyber Vision provides state of the art solutions to independent
           community. We strive to build strong relationships with our customers,
           business partners, and employees and to provide them with unsurpassed
@@ -25,7 +25,7 @@ const Services = () => {
           </span>
         </Button>
       </div>
-      <div className="w-full flex flex-col items-center  md:flex-row md:items-center md:justify-end gap-8 basis-3/4  ">
+      <div className="flex w-full basis-3/4 flex-col  items-center gap-8 md:flex-row md:items-center md:justify-end  ">
         <div>
           <ServiceItem title="Web Development" Icon={BsFileEarmarkCode} />
         </div>
@@ -50,11 +50,11 @@ const ServiceItem = ({
   Icon: IconType;
 }) => {
   return (
-    <div className="w-52 h-52 flex flex-col items-center will-change-auto transition-all duration-300 ease-in-out justify-center rounded-xl gap-4 shadow-lg cursor-pointer group hover:bg-primary hover:text-white text-primary ">
-      <div className="w-12 h-12 relative">
-        <Icon className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full  " />
+    <div className="group flex h-52 w-52 cursor-pointer flex-col items-center justify-center gap-4 rounded-xl text-primary shadow-lg transition-all duration-300 ease-in-out will-change-auto hover:bg-primary hover:text-white ">
+      <div className="relative h-12 w-12">
+        <Icon className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 transform  " />
       </div>
-      <h3 className="text-sm  text-center">{title}</h3>
+      <h3 className="text-center  text-sm">{title}</h3>
     </div>
   );
 };

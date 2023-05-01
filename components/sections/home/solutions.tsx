@@ -13,8 +13,8 @@ const Solutions = () => {
             className="text-white"
             title="THE COMPLETE PLATFORM"
             variant="secondary"
+            subtitle="Services We´re Providing"
           />
-          <h1 className="text-4xl font-bold">Solutions For Everyone</h1>
           <p className="max-w-[80%] text-white text-opacity-70 ">
             Cyber Vision Consulting offers a complete platform for consumers and
             businesses to enter the world.
